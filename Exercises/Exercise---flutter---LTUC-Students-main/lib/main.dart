@@ -70,7 +70,7 @@ class MyApp extends StatelessWidget {
                         height: 320,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage("images/1.jpeg"),
+                            image: AssetImage("images/4.jpg"),
                           ),
                         ),
                       ),
@@ -79,7 +79,7 @@ class MyApp extends StatelessWidget {
                         height: 320,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage("images/2.jpeg"),
+                            image: AssetImage("images/5.png"),
                           ),
                         ),
                       ),
@@ -88,7 +88,7 @@ class MyApp extends StatelessWidget {
                         height: 320,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage("images/3.jpg"),
+                            image: AssetImage("images/6.jpg"),
                           ),
                         ),
                       ),
@@ -97,7 +97,7 @@ class MyApp extends StatelessWidget {
                         height: 320,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage("images/1.jpeg"),
+                            image: AssetImage("images/7.png"),
                           ),
                         ),
                       ),
