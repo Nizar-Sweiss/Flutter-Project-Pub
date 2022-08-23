@@ -63,11 +63,14 @@ class MyApp extends StatelessWidget {
                 ),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
+                  
                   child: Row(
                     children: [
+                      
                       Container(
-                        width: 100,
+                        width:300,
                         height: 320,
+                        padding:EdgeInsets.all(50),
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage("images/4.jpg"),
@@ -75,7 +78,7 @@ class MyApp extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width: 100,
+                        width: 300,
                         height: 320,
                         decoration: BoxDecoration(
                           image: DecorationImage(
@@ -84,7 +87,7 @@ class MyApp extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width: 100,
+                        width: 300,
                         height: 320,
                         decoration: BoxDecoration(
                           image: DecorationImage(
@@ -93,7 +96,7 @@ class MyApp extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width: 100,
+                        width: 300,
                         height: 320,
                         decoration: BoxDecoration(
                           image: DecorationImage(
