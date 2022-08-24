@@ -180,7 +180,10 @@ class Home extends StatelessWidget {
                             )),
                         IconButton(
                           onPressed: () {
-                            //right way: use context in below level tree with MaterialApp
+                            //There is an error need to be fixed :
+                            //Exception has occurred.
+                            //FlutterError (Navigator operation requested with a context that does not include a Navigator.
+                            //The context used to push or pop routes from the Navigator must be that of a widget that is a descendant of a Navigator widget.)
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
