@@ -5,19 +5,29 @@ void main() {
   runApp(Home());
 }
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
 
   @override
+  State<Home> createState() => _HomeState();
+}
+
+bool isButtonPressed = false;
+Color mydefaultColor = Colors.white;
+String myImage1 = "images/btv1.jpg";
+String myImage2 = "images/btv2.jpg";
+
+class _HomeState extends State<Home> {
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
       home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 222, 222, 222),
-          appBar: AppBar(backgroundColor: Color.fromARGB(255, 0, 208, 255),),
+          backgroundColor: mydefaultColor,
+          appBar: AppBar(
+            backgroundColor: Color.fromARGB(255, 0, 208, 255),
+          ),
           drawer: Drawer(),
           body: ListView(
-            
             children: [
               Row(
                 children: [
@@ -32,7 +42,7 @@ class Home extends StatelessWidget {
                         height: 250,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage("images/btv1.jpg"),
+                            image: AssetImage(myImage1),
                           ),
                         ),
                       ),
@@ -78,6 +88,24 @@ class Home extends StatelessWidget {
                       ),
                     ],
                   )
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      //action coe when button is pressed
+                      setState(() {
+                        myImage1 = "images/btv5.jpg";
+                      });
+                    },
+                    icon: Icon(
+                      Icons.send,
+                      color: Color.fromARGB(255, 0, 183, 255),
+                      size: 50,
+                    ),
+                  ),
                 ],
               ),
               Row(
@@ -132,17 +160,38 @@ class Home extends StatelessWidget {
                           ),
                         ],
                       ),
+                      
                       Container(
                         width: 250,
                         height: 250,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage("images/btv2.jpg"),
+                            image: AssetImage(myImage2),
                           ),
                         ),
                       ),
                     ],
                   )
+                  
+                ],
+              ),
+                Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    
+                    onPressed: () {
+                      //action coe when button is pressed
+                      setState(() {
+                        myImage2 = "images/btv6.jpg";
+                      });
+                    },
+                    icon: Icon(
+                      Icons.send,
+                      color: Color.fromARGB(255, 0, 183, 255),
+                      size: 50,
+                    ),
+                  ),
                 ],
               ),
               Row(
@@ -292,6 +341,10 @@ class Home extends StatelessWidget {
                               onPressed: () {
                                 //action coe when button is pressed
                                 //showToastMessage("You rated us So Bad Rating ! ");
+                                setState(() {
+                                  mydefaultColor =
+                                      Color.fromARGB(255, 236, 6, 6);
+                                });
                               },
                               icon: Icon(
                                 Icons.circle,
@@ -307,7 +360,11 @@ class Home extends StatelessWidget {
                             child: IconButton(
                               onPressed: () {
                                 //action coe when button is pressed
+
                                 //showToastMessage("Show Toast Message on Flutter");
+                                setState(() {
+                                  mydefaultColor = Colors.green;
+                                });
                               },
                               icon: Icon(
                                 Icons.circle,
@@ -323,6 +380,9 @@ class Home extends StatelessWidget {
                             child: IconButton(
                               onPressed: () {
                                 //action coe when button is pressed
+                                setState(() {
+                                  mydefaultColor = Colors.blue;
+                                });
                               },
                               icon: Icon(
                                 Icons.circle,
@@ -338,11 +398,11 @@ class Home extends StatelessWidget {
                             child: IconButton(
                               onPressed: () {
                                 //action coe when button is pressed
+                                setState(() {
+                                  mydefaultColor = Colors.black;
+                                });
                               },
-                              icon: Icon(
-                                Icons.circle,
-                                color: Color.fromARGB(255, 246, 255, 0),
-                              ),
+                              icon: Icon(Icons.circle, color: Colors.black),
                             ),
                           ),
                         ],
