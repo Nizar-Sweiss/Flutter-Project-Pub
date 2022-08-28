@@ -32,14 +32,14 @@ class _HomeState extends State<Home> {
               Row(
                 children: [
                   Container(
-                    margin: EdgeInsets.fromLTRB(5, 0, 10, 0),
+                    margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
                     child: Text("Option 1"),
                   ),
                   Row(
                     children: [
                       Container(
-                        width: 250,
-                        height: 250,
+                        width: 240,
+                        height: 240,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(myImage1),
@@ -87,11 +87,9 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                     ],
-                  )
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                  ),
+                   Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   IconButton(
                     onPressed: () {
@@ -103,15 +101,18 @@ class _HomeState extends State<Home> {
                     icon: Icon(
                       Icons.send,
                       color: Color.fromARGB(255, 0, 183, 255),
-                      size: 50,
+                      size: 40,
                     ),
                   ),
                 ],
               ),
+                ],
+              ),
+              
               Row(
                 children: [
                   Container(
-                    margin: EdgeInsets.fromLTRB(5, 0, 10, 0),
+                    margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
                     child: Text("Option 2"),
                   ),
                   Row(
@@ -162,24 +163,18 @@ class _HomeState extends State<Home> {
                       ),
                       
                       Container(
-                        width: 250,
-                        height: 250,
+                        width: 240,
+                        height: 240,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(myImage2),
                           ),
                         ),
                       ),
-                    ],
-                  )
-                  
-                ],
-              ),
-                Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                       Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   IconButton(
-                    
                     onPressed: () {
                       //action coe when button is pressed
                       setState(() {
@@ -189,11 +184,17 @@ class _HomeState extends State<Home> {
                     icon: Icon(
                       Icons.send,
                       color: Color.fromARGB(255, 0, 183, 255),
-                      size: 50,
+                      size: 40,
                     ),
                   ),
                 ],
               ),
+                    ],
+                  )
+                  
+                ],
+              ),
+                
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
